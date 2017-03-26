@@ -4,8 +4,8 @@
  * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
 
  Author: Hafeez Syed
- File: app.js.js
- Created on 23/3/17 11:40 PM
+ File: db-connect.js
+ Created on 26/3/17 7:19 PM
  Project: M101JS-MongoDB-for-NodeJS-Developers
  Description: < DESCRIPTION HERE >
 
@@ -14,12 +14,18 @@
  * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
  */
 
-const app = require('./routes/main');
+'use strict';
 
+const MongoDBClient = require('mongodb').MongoClient;
 
+function connectDB() {
+	return MongoDBClient.connect('mongodb://localhost:27017/video');
+}
 
-var server = app.listen(7080, function () {
-	var port = server.address().port;
-	console.log('server listening on port %s', port);
-});
+function db() {
+	return {
+		connectDB: connectDB
+	}
+}
 
+module.exports = db;

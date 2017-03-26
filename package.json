@@ -18,8 +18,10 @@
   },
   "homepage": "https://github.com/hafeez-syed/Mongo-Node#readme",
   "dependencies": {
+    "body-parser": "^1.17.1",
     "consolidate": "^0.14.5",
     "express": "^4.15.2",
-    "mongodb": "^2.2.25"
+    "mongodb": "^2.2.25",
+    "nunjucks": "^3.0.0"
   }
 }
