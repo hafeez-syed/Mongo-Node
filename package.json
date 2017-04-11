@@ -19,6 +19,7 @@
   "homepage": "https://github.com/hafeez-syed/Mongo-Node#readme",
   "dependencies": {
     "body-parser": "^1.17.1",
+    "command-line-args": "~2.1.4",
     "consolidate": "^0.14.5",
     "express": "^4.15.2",
     "mongodb": "^2.2.25",
